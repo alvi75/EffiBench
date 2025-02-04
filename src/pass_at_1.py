@@ -56,9 +56,13 @@ failed_files = executed_files - passed_files
 # Calculate Pass@1 (Using fixed total of 1000 generated scripts)
 pass_at_1 = (passed_files / 1000) * 100  
 
+# Binomial estimation calculation:
+binomial_pass_at_1 = ((passed_files + 1) / (1000 + 2)) * 100
+
 # Print Summary
 print("\nProcessing complete!")
 print(f"Total scripts executed: {executed_files}")
 print(f"passed scripts: {passed_files}")
 print(f"Failed scripts: {failed_files}")  # Now correctly calculated
 print(f"Pass@1: {pass_at_1:.2f}%")
+print(f"Pass@1 (Binomial Estimate): {binomial_pass_at_1:.2f}%")
