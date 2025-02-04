@@ -26,7 +26,7 @@ for py_file in tqdm(python_files, desc="Processing Python files"):
     py_file_path = os.path.join(executed_code_dir, py_file)
     
     try:
-        # 🏃 Execute the Python file and check for assertion errors
+        # Execute the Python file and check for assertion errors
         result = subprocess.run(
             ["python3", py_file_path], capture_output=True, text=True, timeout=10
         )
