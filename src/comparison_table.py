@@ -9,7 +9,7 @@ from tqdm import tqdm
 # Read the API key from the environment variable
 openai.api_key = os.getenv("OPENAI_API_KEY")
 if not openai.api_key:
-    raise ValueError("🚨 OPENAI_API_KEY environment variable is not set. Please provide your OpenAI API key.")
+    raise ValueError("OPENAI_API_KEY environment variable is not set. Please provide your OpenAI API key.")
 
 # File paths
 original_file = "../data/processed_dataset.json"
@@ -54,7 +54,7 @@ def call_gpt4o(prompt):
 
         except openai.error.RateLimitError as e:
             wait_time = 10  # Default wait time
-            print(f"⚠️ Rate limit reached! Retrying in {wait_time} seconds...")
+            print(f"⚠Rate limit reached! Retrying in {wait_time} seconds...")
             time.sleep(wait_time)
 
         except openai.error.AuthenticationError as e:
@@ -125,4 +125,4 @@ df = pd.DataFrame(data, columns=[
 output_file = "../data/comparison_table.xlsx"
 df.to_excel(output_file, index=False)
 
-print(f"✅ Comparison table saved as '{output_file}'")
+print(f"Comparison table saved as '{output_file}'")
