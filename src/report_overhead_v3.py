@@ -145,7 +145,7 @@ else:
     total_memory_usage /= len(normalized_execution_time_list)
     total_max_memory_usage /= len(normalized_execution_time_list)
 
-    # ✅ **Restored Original Pass@1 Calculation**
+    # **Restored Original Pass@1 Calculation**
     pass1 = len(normalized_execution_time_list) / 1000 * 100
 
     # Print all metrics
