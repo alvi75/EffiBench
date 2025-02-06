@@ -166,7 +166,7 @@ for model in global_result.keys():
     total_max_memory_usage /= len(normalized_execution_time_list)
 
     pass1 = (executed_files / 1000) * 100
-    pass_at_1 = (passed_files / executed_files) * 100  # **✅ Corrected Pass@1 Calculation**
+    pass_at_1 = (passed_files / executed_files) * 100  # ** Corrected Pass@1 Calculation**
 
     # Print all metrics
     print(f"{model}&"
